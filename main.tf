@@ -12,14 +12,19 @@ terraform {
 
 provider "azurerm" {
   features {}
+    subscription_id = "c9642077-afde-461c-9e7c-81536f8e0e97"
+    client_id       = "91badb49-b9f6-41a5-8e88-e9a924aa69dc"
+    client_secret   = "xm08Q~jfpyUKnOM71Ucm2S.-TlQHKtMihzGAvdoO"
+    tenant_id       = "40e20b2c-2571-4106-a067-9cad17e7ef47"
+
 }
 
 resource "azurerm_resource_group" "rg" {
-  name     = var.resource_group_name
+  name     = "Jenkins-test"
   location = "westus2"
 
   tags = {
-    Environment = "Terraform Getting Started"
+    Environment = "Jenkins Getting Started"
     Team = "DevOps"
   }
 }
