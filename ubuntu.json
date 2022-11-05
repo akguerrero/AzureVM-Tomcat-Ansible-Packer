@@ -26,15 +26,15 @@
     "provisioners": [
       {
       "type": "shell",
-      "script": "/home/kevin/DevOpsWSL/packer-ansible-tomcat/AnsibleUbuntuAzure.sh"
+      "script": "./AnsibleUbuntuAzure.sh"
       },
       {
       "type": "ansible-local",
-      "playbook_file": "/home/kevin/DevOpsWSL/packer-ansible-tomcat/install-tomcat.yml"
+      "playbook_file": "./install-tomcat.yml"
       },
       {
         "type": "shell",
-        "script": "/home/kevin/DevOpsWSL/packer-ansible-tomcat/TomcatStart.sh"
+        "script": "./TomcatStart.sh"
         }
   
     ]
